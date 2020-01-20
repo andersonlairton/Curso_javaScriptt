@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>Primeiro exercicio em javaScript</title>
+</head>
+
+<body>
+    <script>
+
+        /* function questao1 (endereco) {
+             var endereco={
+                 rua:'rua dos pinheiros',
+                 numero:'1293',
+                 bairro:'centro',
+                 cidade:'São Paulo',
+                 uf:'sp'
+             }
+             return 'O usuario mora em '+
+             endereco.cidade+'/'+
+             endereco.uf+', no bairro '
+             +endereco.bairro+
+             ' na "'+endereco.rua+'" com numero '+endereco.numero;
+
+         }
+
+         function numerosPares(x,y) {
+             
+             for(i=x;i<=y;i++){
+
+                 if(i%2==0){//se i dividio por 2 tiver resto zero
+                     console.log(i);
+                 }
+                 //console.log('funcionando');
+             }
+         }
+*/
+        function temHabilidade(skills) {
+
+            var habilidade;
+            console.log(skills.indexOf('php'));
+            //indexOf retorna zero quando exite e -1 quando nao existe o elemento no array
+            if (skills.indexOf('Javascript') == 0) {
+                console.log(true);
+            } else {
+                console.log(false);
+            }
+        }
+
+        function anosdeEstudo(anos) {
+            if (anos <= 1) {
+                console.log('iniciante');
+            }
+            else if (anos < 4) {
+                console.log('intermediario');
+
+            } else if (anos < 7) {
+                console.log('avançado');
+            } else {
+                console.log('jedimaster');
+            }
+        }
+
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        var exeperiencia = 7;
+        anosdeEstudo(exeperiencia);
+        //numerosPares(32,321);
+
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        temHabilidade(skills); // true ou false
+
+        //var endereco= questao1(endereco);
+        //console.log(endereco);
+        
+    </script>
+</body>
+
+</html>

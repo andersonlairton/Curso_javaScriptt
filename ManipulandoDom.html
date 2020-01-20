@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Manipulando dom</title>
+    </head>
+    
+    <body>
+        <div id='app'>
+           
+            <input type="text" name="nome"/>
+            
+            <button class="botao">adicionar</button>            
+        </div>
+             
+            
+
+        <script>
+            //referenciando elementos
+            //var inputElement = document.querySelector('div#app input');
+            //referenciando pela propriedade nome
+           
+            var inputElement=document.querySelector('input[name=nome]')
+            var btnElement= document.querySelector('button.botao');
+
+            btnElement.onclick = function () {
+                //criando um alert com as informações do textbox
+                var text = inputElement.value;//recuperando o que foi digitado
+                
+                alert(text);
+                
+            }
+            
+
+        </script>
+    </body>
+    
+</html>
