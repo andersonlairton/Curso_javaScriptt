@@ -1,0 +1,46 @@
+<HTML>
+
+<HEAD>
+
+<body>
+    <script>
+
+        function duplicarCampos() {
+
+            var clone = document.getElementById('origem').cloneNode(true);//aqui define o que ira ser clonado 
+            var inputsClone = clone.getElementsByTagName('input'); // todos os inputs clonados
+
+            for (var i = 0; i < inputsClone.length; i++) {
+                inputsClone[i].value = '';
+            }
+
+            destino.appendChild(clone); // todos inputs clonados "limpos"
+
+        }
+
+        function removerCampos(id) {
+            var node1 = document.getElementById('destino');
+            node1.removeChild(node1.childNodes[0]);
+        }
+
+    </script>
+    <div id="origem" align="center">
+        <p>Fone
+            <input type="text" id="fone1" name="fone[]" maxlength="14" size="14" />
+        </p>
+        <p>RG
+            <input type="text" id="rg1" name="rg[]" maxlength="14" size="14" />
+        </p>
+        <p>CPF
+            <input type="text" id="cpf1" name="cpf[]" maxlength="14" size="14" />
+            <input type="submit" value="+" onclick="duplicarCampos();">
+            <input type="submit" value="-" onclick="removerCampos(this);">
+        </p>
+    </div>
+
+    <div id="destino">
+    </div>
+
+</body>
+
+</HTML>
